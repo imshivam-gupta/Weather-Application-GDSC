@@ -30,20 +30,28 @@ main{
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  padding: 2rem 1rem 0rem 1rem;
+  padding: 1.1rem 1.1rem 1.2rem 1.1rem;
   width: 100%;
+}
+
+header{
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 body{
   background-color: var(--black);
   color: white;
-  padding: 1.1rem 1.1rem;
+  padding: 1rem 0rem 0rem 0rem;
 }
 
 a{
   text-decoration: none;
   color:white;
 }
+
 
 @media screen and (orientation : portrait){
   main{
@@ -52,6 +60,19 @@ a{
   }
 
   body{
-    padding: 1.1rem 1rem;
+    padding: 0rem 0rem;
+  }
+
+  header{
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left:0.8rem;
+    padding-right:0.8rem;
+  }
+
+  .nav-bar{
+    height: 8vh!important;
   }
 }

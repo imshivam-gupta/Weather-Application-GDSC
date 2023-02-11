@@ -60,7 +60,10 @@
         margin-top: 0.5rem;
         padding: 1.2rem 0rem 1.2rem 0rem;
         margin-left: 0%;
-        overflow-x:scroll ;
+        overflow-x:auto ;
+    }
+    .right-secn .other-city-list::-webkit-scrollbar{
+        display: none;
     }
 
     .add-city{
