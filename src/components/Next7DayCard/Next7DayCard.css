@@ -7,6 +7,12 @@
     width: 100%;
     height: max-content;
     margin-bottom: 1rem;
+    overflow-x: auto;
+
+}
+
+.weather-item-cards::-webkit-scrollbar{
+    display: none;
 }
 
 @media screen and (orientation : portrait){

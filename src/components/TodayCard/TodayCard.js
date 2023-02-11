@@ -41,23 +41,38 @@ const TodayCard = () => {
     <div className='today-card'>
 
       <div className='left-section-today'>
-        <span>Current Weather</span>
-        <span>{time}</span>
-        <img src={imgsrc} style={{'width':'100px'}} />
-        <span className='temp-today'>{weatherInfo[day] ? weatherInfo[day].temp : '16'}{'\u00b0'}</span>
-        <span className='city-name-today'>{weatherInfo && weatherInfo[7] ? weatherInfo[7].q : 'Seattle'}</span>
-        <span className='weather-today'>  {weatherInfo[day] && weatherInfo[day].weather[day] ? weatherInfo[day].weather[day].description: 'Mostly Sunny'}</span>
+          <div className='weather-condition-displayer'>
+            <span>Current Weather</span>
+            <span>{time}</span>
+            <img src={imgsrc} style={{'width':'80px'}} />
+            <span className='weather-today'>  {weatherInfo[day] && weatherInfo[day].weather[day] ? (weatherInfo[day].weather[day].description.charAt(0).toUpperCase()+weatherInfo[day].weather[day].description.substring(1)): 'Mostly Sunny'}</span>
+          </div>
+      
+          <div className='temp-displayer'>
+            <span className='temp-today'>{weatherInfo[day] ? weatherInfo[day].temp : '16'}{'\u00b0'}</span>
+            <span className='real-feel'>RealFeel &reg; {currWeather.feels_like}</span>
+          </div>
       </div>
+
 
       <div className='right-section-today'>
-        <span>{currWeather.feels_like}{'\u00b0'}</span>{' '}
-        <span>{currWeather.humidity}</span>{' '}
-        <span>{currWeather.speed}</span>
-      </div>
+        <span className='city-name-today'>{weatherInfo && weatherInfo[7] ? weatherInfo[7].q : 'Seattle'}</span>
+        <div className='today-other-condn'>
+          <div className='property'>
+            <span>Real Feel</span>
+            <span>{currWeather.feels_like}{'\u00b0'}</span>
+          </div>
 
-
-      <div>
-        
+          <div className='property'>
+            <span>Humidity</span>
+            <span>{currWeather.humidity}</span>
+          </div>
+          
+          <div className='property'>
+            <span>Wind Speed</span>
+            <span>{currWeather.speed}</span>
+          </div>
+        </div>
       </div>
       
 

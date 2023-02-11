@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-size: 1.2rem;
     padding: 0rem 2.2rem;
-    width: 25vw;
+    width: 35vw;
 }
 
 
@@ -26,10 +26,20 @@
     color: var(--blue)!important;  
 }
 
+
+@media screen and (max-width:900px){
+    .mini-nav-view{
+        width: 45vw;
+    }
+}
+
 @media screen and (orientation : portrait){
     .mini-nav-view{
         font-size: 1.1rem;
-        width: 70vw;
+        width: 80vw;
         padding: 0rem;
     }
 }
+
+
+

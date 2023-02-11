@@ -7,12 +7,29 @@
     flex-direction: column;
     height: 85vh;
     overflow-y:scroll ;
+    z-index: 1;
 }
 
-.right-secn h1{
-    font-weight: 600;
+.heading-other-city{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.heading-other-city h1{
+    font-weight: 400;
     text-align: center;
 }
+
+.heading-other-city i{
+    font-weight: 800;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
 
 .right-secn::-webkit-scrollbar {
     display: none;

@@ -13,7 +13,7 @@ const useCurrentCallback = (callback) => {
 const HourCard = ({hour_details}) => {
 
   // console.log(hour_details)
-  let {temp,weather,humidity,hour,speed,imgsrc} =hour_details
+  let {temp,humidity,hour,speed,imgsrc} =hour_details
 
   let fetcher
   let init_hour
@@ -33,13 +33,13 @@ const HourCard = ({hour_details}) => {
     <>
     {
     
-      <div className={'weather-card'}>
+      <div className={'hour-card'}>
 
-          <div className='weather-card-day'>
+          <div className='hour-card-day'>
             {hour}
           </div>
-          <div className='weather-card-img'><img src={imgsrc} /></div>
-          <div className='weather-card-temp'>{temp}{'\u00b0'}</div>
+          <div className='hour-card-img'><img src={imgsrc} /></div>
+          <div className='hour-card-temp'>{temp}{'\u00b0'}</div>
       </div>
 
      

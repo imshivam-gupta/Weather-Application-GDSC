@@ -36,35 +36,48 @@ const TommorowCard = () => {
 
   let currWeather = weatherInfo && weatherInfo[day] ? weatherInfo[day] : {}
 
-
-
   let imgsrc= weatherInfo && weatherInfo[day] && weatherInfo[day].weather[day] ? returnImagesSource(weatherInfo[day].weather[day].description) : returnImagesSource('snow')
 
 
   return (
-    <div className='tommorow-card'>
+    <div className='tomorrow-card'>
 
-      <div className='left-section-tommorow'>
-        <span>Current Weather</span>
-        <img src={imgsrc} style={{'width':'100px'}} />
-        <span className='temp-tommorow'>{weatherInfo[day] ? weatherInfo[day].temp : '16'}{'\u00b0'}</span>
-        <span className='city-name-tommorow'>{weatherInfo && weatherInfo[7] ? weatherInfo[7].q : 'Seattle'}</span>
-        <span className='weather-tommorow'>  {weatherInfo[day] && weatherInfo[day].weather[day] ? weatherInfo[day].weather[day].description: 'Mostly Sunny'}</span>
-      </div>
-
-      <div className='right-section-tommorow'>
-        <span>{currWeather.feels_like}{'\u00b0'}</span>{' '}
-        <span>{currWeather.humidity}</span>{' '}
-        <span>{currWeather.speed}</span>
-      </div>
-
-
-      <div>
-        
-      </div>
-      
-
+    <div className='left-section-tomorrow'>
+        <div className='weather-condition-displayer'>
+          <span>Current Weather</span>
+          <img src={imgsrc} style={{'width':'80px'}} />
+          <span className='weather-tomorrow'>  {weatherInfo[day] && weatherInfo[day].weather[day] ? (weatherInfo[day].weather[day].description.charAt(0).toUpperCase()+weatherInfo[day].weather[day].description.substring(1)): 'Mostly Sunny'}</span>
+        </div>
+    
+        <div className='temp-displayer'>
+          <span className='temp-tomorrow'>{weatherInfo[day] ? weatherInfo[day].temp : '16'}{'\u00b0'}</span>
+          <span className='real-feel'>RealFeel &reg; {currWeather.feels_like}</span>
+        </div>
     </div>
+
+
+    <div className='right-section-tomorrow'>
+      <span className='city-name-tomorrow'>{weatherInfo && weatherInfo[7] ? weatherInfo[7].q : 'Seattle'}</span>
+      <div className='tomorrow-other-condn'>
+        <div className='property'>
+          <span>Real Feel</span>
+          <span>{currWeather.feels_like}{'\u00b0'}</span>
+        </div>
+
+        <div className='property'>
+          <span>Humidity</span>
+          <span>{currWeather.humidity}</span>
+        </div>
+        
+        <div className='property'>
+          <span>Wind Speed</span>
+          <span>{currWeather.speed}</span>
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
   )
 }
 

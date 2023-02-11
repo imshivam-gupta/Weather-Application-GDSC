@@ -8,7 +8,7 @@ const ViewToggler = () => {
     <div className='mini-nav-view'>
             <NavLink to = '/' className="tab">         Today        </NavLink >
             <NavLink to = '/tommorow' className="tab"> Tommorow     </NavLink>
-            <NavLink to = '/nextweek' className='tab'> Next Week </NavLink>
+            <NavLink to = '/nextweek' className='tab'> This Week </NavLink>
     </div>
   )
 }

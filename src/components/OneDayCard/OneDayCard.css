@@ -7,7 +7,7 @@
     background-color: rgb(27,26,29);
     /* padding: 10px 2px; */
     border-radius: 20px;
-    width: 12.5%;
+    width: 12.2rem;
     /* width: 500px; */
 }
 
@@ -47,7 +47,7 @@
     color: black;
     font-weight: 700;
     border-radius: 20px;
-    width: 25%;
+    width: 25rem;
 }
 
 .active-weather-card .active-card-day{

@@ -13,6 +13,8 @@ export const returnImagesSource = (name) => {
         if(name==='light rain') ans="images/light-rain.png"
         if(name==='snow') ans="images/snow.png"
         if(name==='thunderstorm') ans="images/thunderstorm.png"
+        if(name==='haze') ans="images/haze.png"
+        if(name==='smoke') ans="images/smoke.png"
 
     return ans
 
