@@ -1,0 +1,95 @@
+.other-city-card{
+    box-sizing: border-box;
+    width: 100%;
+    text-align:center;
+    min-height: 80px;
+    margin-bottom: 1.5rem;
+    background-color: #1B1A1D;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 0rem 0.8rem 1rem 0rem;
+}
+
+.other-city-card .location-name-condn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28%;
+}
+
+.other-city-card .location-del-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28%;
+}
+
+.other-city-card .location-weather-img{
+    width: 28%;
+}
+
+.other-city-card .location-weather-img img{
+    width: 100px;
+    height: 80px;
+}
+
+@media screen and (orientation : portrait){
+    .other-city-card{
+        box-sizing: border-box;
+        width: 100rem;
+        margin-left: 17px;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0px;
+        /* padding-bottom: 15px; */
+    }
+
+    .other-city-card .location-name-condn{
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        padding: 10px 20px ;
+        justify-content: center;
+    }
+
+    .other-city-card .location-name-condn span:nth-child(1){
+        font-size: 1.2rem;
+        padding-bottom: 12px;
+    }
+
+    .other-city-card .location-name-condn span:nth-child(2){
+        font-size: 0.8rem;
+        height: 40px;
+    }
+
+    .other-city-card .location-weather-img img{
+        width: 70px;
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+    .other-city-card .location-weather-img{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+
+    .other-city-card .location-del-icon i{
+        text-align: center;
+    }
+
+    .other-city-card .location-del-icon{
+        width: 100%;
+        background-color: red;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        padding: 0.8rem 0rem;
+    }
+
+
+
+}

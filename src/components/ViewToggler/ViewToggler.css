@@ -1,0 +1,35 @@
+.mini-nav-view{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    padding: 0rem 2.2rem;
+    width: 25vw;
+}
+
+
+.mini-nav-view a{
+    color: rgb(118, 121, 124);
+}
+
+.mini-nav-view .active{
+    color: white;
+}
+
+.tab:hover,.tab:active {
+    color: var(--blue);
+    transition: 0.3s;
+}
+
+.mini-nav-view .active{
+    color: var(--blue)!important;  
+}
+
+@media screen and (orientation : portrait){
+    .mini-nav-view{
+        font-size: 1.1rem;
+        width: 70vw;
+        padding: 0rem;
+    }
+}

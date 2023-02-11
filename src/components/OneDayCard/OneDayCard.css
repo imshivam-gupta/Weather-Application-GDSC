@@ -1,0 +1,129 @@
+.weather-card{
+    display: flex;
+    flex-direction: column;
+    margin-left: 14px;
+    margin-right: 14px;
+    justify-content: space-around;
+    background-color: rgb(27,26,29);
+    /* padding: 10px 2px; */
+    border-radius: 20px;
+    width: 12.5%;
+    /* width: 500px; */
+}
+
+
+.weather-card .weather-card-img img{
+    width: 90px;
+    height: 70px;
+}
+
+.weather-card .weather-card-temp,.weather-card-day,.weather-card-img{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+    background: transparent;
+}
+
+.weather-card .weather-card-day{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.3px solid rgb(86, 84, 84);
+}
+
+.weather-card .weather-card-temp{
+    font-family: 'Quantico', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+
+
+
+
+.active-weather-card{
+    background-color: var(--blue);
+    color: black;
+    font-weight: 700;
+    border-radius: 20px;
+    width: 25%;
+}
+
+.active-weather-card .active-card-day{
+    background-color: rgb(173,202,222);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px 30px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.active-weather-card .active-card-mid{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+}
+
+.active-weather-card .active-card-mid .active-card-temp{
+    font-family: 'Quantico', sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.active-weather-card .active-card-mid .active-card-img img{
+    width: 90px;
+    height: 70px;
+}
+
+.active-weather-card .active-card-bottom .bottom-prop{
+    color: rgb(96,78,78);
+    font-weight: 500;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.active-weather-card .active-card-bottom {
+    padding: 0px 11px 12px 18px;
+}
+
+
+@media screen and (max-width:1360px) {
+    .time-india{
+        display: none;
+    }
+    .active-weather-card .active-card-bottom .bottom-prop{
+        font-weight: 400;
+        font-size: 0.5rem;
+    }
+    
+}
+
+@media screen and (orientation : portrait){
+    .weather-card{
+        box-sizing: border-box;
+        width: 12rem;
+        margin-left: 0px;
+    }
+
+    .active-weather-card{
+        width: 12rem;
+    }
+
+    .active-weather-card .active-card-mid .active-card-temp{
+        font-size: 1.7rem;
+    }
+
+    .active-weather-card .active-card-mid .active-card-img img{
+        width: 70px;
+        height: 50px;
+    }
+
+    .active-weather-card .active-card-bottom .bottom-prop{
+        font-weight: 400;
+        font-size: 0.6rem;
+    }
+    
+}

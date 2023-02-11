@@ -1,0 +1,61 @@
+.right-secn{
+    box-sizing: border-box;
+    margin-left: 4rem;
+    width: 25%;
+    padding: 0rem 0rem 0rem 0.7rem;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    overflow-y:scroll ;
+}
+
+.right-secn h1{
+    font-weight: 600;
+    text-align: center;
+}
+
+.right-secn::-webkit-scrollbar {
+    display: none;
+}
+
+.right-secn .other-city-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.add-city{
+    display: none;
+}
+
+@media screen and (orientation : portrait){
+
+    .right-secn {
+        width: 99%;
+        padding: 0rem;
+        margin-left: 0rem;
+
+    }
+    .right-secn .other-city-list{
+        /* width: 100%; */
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.5rem;
+        padding: 1.2rem 0rem 1.2rem 0rem;
+        margin-left: 0%;
+        overflow-x:scroll ;
+    }
+
+    .add-city{
+        margin-top: 2rem;
+        display: block;
+        padding: 0.3rem 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.2rem;
+        background-color: var(--blue);
+        outline: none;
+        border: 3px solid gray;
+    }
+}
+

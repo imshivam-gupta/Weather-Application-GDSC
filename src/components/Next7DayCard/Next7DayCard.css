@@ -1,0 +1,20 @@
+.weather-item-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 1.7rem 0.8rem;
+    width: 100%;
+    height: max-content;
+    margin-bottom: 1rem;
+}
+
+@media screen and (orientation : portrait){
+    .weather-item-cards{
+        width: 100%;
+        margin-top: 0.5rem;
+        padding: 1.2rem 0.5rem 1.2rem 0rem;
+        margin-left: 0%;
+        overflow-x: scroll;
+    }
+}
