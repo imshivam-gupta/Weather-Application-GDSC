@@ -44,9 +44,9 @@ const TodayCard = () => {
         <span>Current Weather</span>
         <span>{time}</span>
         <img src={imgsrc} style={{'width':'100px'}} />
-        <span className='temp-today'>{currWeather ? weatherInfo[day].temp : '16'}{'\u00b0'}</span>
+        <span className='temp-today'>{weatherInfo[day] ? weatherInfo[day].temp : '16'}{'\u00b0'}</span>
         <span className='city-name-today'>{weatherInfo && weatherInfo[7] ? weatherInfo[7].q : 'Seattle'}</span>
-        <span className='weather-today'>  {currWeather && weatherInfo[day].weather[day] ? weatherInfo[day].weather[day].description: 'Mostly Sunny'}</span>
+        <span className='weather-today'>  {weatherInfo[day] && weatherInfo[day].weather[day] ? weatherInfo[day].weather[day].description: 'Mostly Sunny'}</span>
       </div>
 
       <div className='right-section-today'>

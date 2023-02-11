@@ -47,9 +47,9 @@ const TommorowCard = () => {
       <div className='left-section-tommorow'>
         <span>Current Weather</span>
         <img src={imgsrc} style={{'width':'100px'}} />
-        <span className='temp-tommorow'>{currWeather ? weatherInfo[day].temp : '16'}{'\u00b0'}</span>
+        <span className='temp-tommorow'>{weatherInfo[day] ? weatherInfo[day].temp : '16'}{'\u00b0'}</span>
         <span className='city-name-tommorow'>{weatherInfo && weatherInfo[7] ? weatherInfo[7].q : 'Seattle'}</span>
-        <span className='weather-tommorow'>  {currWeather && weatherInfo[day].weather[day] ? weatherInfo[day].weather[day].description: 'Mostly Sunny'}</span>
+        <span className='weather-tommorow'>  {weatherInfo[day] && weatherInfo[day].weather[day] ? weatherInfo[day].weather[day].description: 'Mostly Sunny'}</span>
       </div>
 
       <div className='right-section-tommorow'>
