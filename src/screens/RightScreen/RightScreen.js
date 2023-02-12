@@ -58,7 +58,7 @@ const RightScreen = () => {
   useEffect(()=>{
       setListWeather(otherWeathersList)
       // console.log(listWeather)
-  },[otherWeathersList,listWeather,addcityHandler])
+  },[otherWeathersList,listWeather])
   
   
   
