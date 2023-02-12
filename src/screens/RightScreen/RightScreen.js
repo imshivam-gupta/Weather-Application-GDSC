@@ -8,6 +8,7 @@ import {DragDropContext} from 'react-beautiful-dnd'
 import { Droppable } from "react-beautiful-dnd";
 import { Draggable } from "react-beautiful-dnd";
 import dynamic from 'next/dynamic'
+import WeatherNewsCard from '../../components/WeatherNewsCard/WeatherNewsCard'
 const OtherCityCard =dynamic (()=>import('../../components/OtherCityCard/OtherCityCard'),{ssr:false})
 
 const useCurrentCallback = (callback) => {
@@ -20,10 +21,39 @@ const useCurrentCallback = (callback) => {
 
 const RightScreen = () => {
   
+  const weatherNews = [
+    {
+      _id:'a',
+      headline:'Weather Update: Maximum temperature to surge more'
+    },
+    {
+      _id:'b',
+      headline:'Rainfall predicted in Haryana, Punjab, Chandigarh, Himachal Pradesh'
+    },
+    {
+      _id:'c',
+      headline:'Winter bids an early Goodbye this year'
+    },
+    {
+      _id:'d',
+      headline:'Driest winter so far in six years'
+    },
+    {
+      _id:'e',
+      headline:'Monsoon to come soon in north'
+    },
+    {
+      _id:'f',
+      headline:'Global warming responsible for less rainfall'
+    }
+  ]
 
   const otherWeathers         = useSelector((state) => state.otherWeathers)
   const { otherWeathersList } = otherWeathers
   const [listWeather,setListWeather] = useState(otherWeathersList)
+  
+  const weatherDetails = useSelector((state) => state.weatherDetails)
+  const { loading, weatherInfo } = weatherDetails
 
   if(listWeather) {
     for(let i=0;i<listWeather.length;i++) {listWeather[i].isDragging=false; listWeather[i]._id=i.toString()}
@@ -62,8 +92,11 @@ const RightScreen = () => {
 
     <div className='right-secn'>
 
+    <div className='other-city-secn'>
+
+
       <div className='heading-other-city'>
-        <h1> Other Cities </h1> <i onClick={addcityHandler} className='fas fa-add'></i>
+         <div>Other Cities </div> <i onClick={addcityHandler} className='fas fa-add'></i>
       </div>
 
      
@@ -100,9 +133,38 @@ const RightScreen = () => {
         </DragDropContext>
         
       
+    </div>
 
-      <button className='add-city' onClick={addcityHandler}>ADD NEW CITY</button>
 
+
+    <div className='latest-news-secn'>
+
+
+        <div className='heading-latest-news'>
+           {weatherInfo && weatherInfo[7] ? weatherInfo[7].q : ''} Weather Reports  
+        </div>
+
+     
+      
+      
+      
+
+              <div className='latest-news-list' >
+                    {
+                      weatherNews.map( (wthr) =>  {
+                           return (
+                                <WeatherNewsCard
+                                  key={wthr._id} 
+                                  wthr={wthr} 
+                                /> 
+
+                              )}
+                    )}
+              </div>
+            
+        
+
+    </div>
 
     </div>
     
