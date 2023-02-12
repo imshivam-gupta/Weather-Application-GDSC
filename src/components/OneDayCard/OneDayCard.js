@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux';
 import './OneDayCard.css'
 
@@ -13,7 +13,7 @@ const useCurrentCallback = (callback) => {
 const OneDayCard = ({day_details}) => {
 
   // console.log(day_details)
-  const {day,humidity,isToday,speed,temp,temp_max,temp_min,imgsrc,curr_temp}=day_details
+  const {day,humidity,isToday,speed,temp,temp_max,temp_min,imgsrc}=day_details
 
   const [time, setTime] = React.useState(0);
   const currentCallback = useCurrentCallback(() => {
@@ -25,7 +25,7 @@ const OneDayCard = ({day_details}) => {
 
     const handle = setInterval(currentCallback, 100);
     return () => clearInterval(handle);
-  }, []);
+  }, [currentCallback]);
 
   const mode = useSelector((state) => state.darkMode);
   const { isdarkMode } = mode;
@@ -42,7 +42,7 @@ const OneDayCard = ({day_details}) => {
           <div className='weather-card-day'>
             {day.substring(0,3)} 
           </div>
-          <div className='weather-card-img'><img src={imgsrc} /></div>
+          <div className='weather-card-img'><img src={imgsrc}alt='weather' /></div>
           <div className='weather-card-temp'>{temp}{'\u00b0'}</div>
       </div>:
 
@@ -54,7 +54,7 @@ const OneDayCard = ({day_details}) => {
 
         <div className='active-card-mid'>
           <div className='active-card-temp'>{temp}{'\u00b0'}</div>
-          <div className='active-card-img'><img src={imgsrc} /></div>
+          <div className='active-card-img'><img src={imgsrc} alt='weather'/></div>
         </div>
 
         <div className='active-card-bottom'>

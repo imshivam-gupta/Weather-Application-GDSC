@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { getWeatherAction, removeOtherCity } from '../../redux/actions';
 import { returnImagesSource } from '../../services/ImageGiver';
 import './OtherCityCard.css'
 
-import { useDrag } from "react-use-gesture";
 import { useSelector } from 'react-redux';
 
 
@@ -49,9 +48,6 @@ const OtherCityCard = ({oth_city}) => {
       // {...bindDivPos()}
       style={{
         cursor: "pointer",
-        // position: 'relative',
-        // top: divPos.y,
-        // left:divPos.x
       }}>
 
       <div className='location-name-condn'>
@@ -61,7 +57,7 @@ const OtherCityCard = ({oth_city}) => {
 
     
       <div className='location-weather-img'>
-        <img src={imgsrc}></img>
+        <img src={imgsrc} alt='weather'></img>
         <span>{oth_city.temp}</span>
       </div>
 

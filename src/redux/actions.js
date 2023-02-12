@@ -1,5 +1,5 @@
 import getFormattedWeatherData7Day, { getCityWeatherFormatted } from "../services/WeatherService";
-import getFormattedWeatherData from "../services/WeatherService";
+
 
 import { 
     ADD_TO_WEATHER_LIST, REMOVE_FROM_WEATHER_LIST,
@@ -41,7 +41,7 @@ export const getWeatherAction = (city) => async(dispatch,getState) => {
 
 export const AddOtherCity = (city) => async(dispatch,getState) => {
     
-    if(city!="NONE")
+    if(city!=="NONE")
         
         try {
             const query = city?{q:city}:{q:""};     

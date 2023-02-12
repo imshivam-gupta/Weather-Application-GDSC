@@ -1,23 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './RightScreen.css'
-// import OtherCityCard from '../../components/OtherCityCard/OtherCityCard'
+import OtherCityCard from '../../components/OtherCityCard/OtherCityCard'
 import { AddOtherCity } from '../../redux/actions'
-
-import {DragDropContext} from 'react-beautiful-dnd'
-import { Droppable } from "react-beautiful-dnd";
-import { Draggable } from "react-beautiful-dnd";
-import dynamic from 'next/dynamic'
 import WeatherNewsCard from '../../components/WeatherNewsCard/WeatherNewsCard'
-const OtherCityCard =dynamic (()=>import('../../components/OtherCityCard/OtherCityCard'),{ssr:false})
-
-const useCurrentCallback = (callback) => {
-  const reference = React.useRef();
-  reference.current = callback;
-  return (...args) => {
-    return reference.current?.(...args);
-  };
-};
 
 const RightScreen = () => {
   
@@ -105,19 +91,12 @@ const RightScreen = () => {
       
       
       
-      <DragDropContext onDragEnd={handleOnDragEnd}>
-        <Droppable droppableId='characters'>
-          {provided => (
-              <div className='other-city-list'  ref={provided.innerRef}  {...provided.droppableProps}>
+
+              <div className='other-city-list'>
                     {
                       listWeather && listWeather.map( (oth_city,index) =>  {
                            return (
-                          <Draggable draggableId={oth_city._id} key={oth_city._id} index={index}>
-                            {provided => (
                               <div
-                                ref={provided.innerRef} 
-                                {...provided.draggableProps}  
-                                {...provided.dragHandleProps}
                               >
                                 <OtherCityCard 
                                   key={oth_city._id} 
@@ -125,15 +104,9 @@ const RightScreen = () => {
                                 /> 
                               </div>
                               )}
-                          </Draggable>
                           )}
-                    )}
-                    {provided.placeholder} 
                 </div>
-            )}
-            </Droppable>
-        </DragDropContext>
-        
+
       
     </div>
 

@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AddOtherCity, getWeatherAction, handledarkMode } from '../../redux/actions'
 import './Header.css'
@@ -30,7 +30,7 @@ const Header = () => {
 
     const AddHandler = () => {
         let city = prompt("Enter city name to append in List", "None");
-        if(city!="None" && city!="") dispatch(AddOtherCity(city))
+        if(city!=="None" && city!=="") dispatch(AddOtherCity(city))
     }
     
     const _handleKeyDown =  function(e) {
@@ -82,7 +82,7 @@ const Header = () => {
                         <i className="fa-solid fa-moon dark-active" />
                         <i className="fa-solid fa-sun light-active"></i>
                     </div>
-                    <img src="images/user-img.png" className='user-img'></img>
+                    <img src="images/user-img.png" alt='user-img' className='user-img'></img>
                 </div>
 
 

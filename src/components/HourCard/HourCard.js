@@ -1,19 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux';
 import './HourCard.css'
 
-const useCurrentCallback = (callback) => {
-  const reference = React.useRef();
-  reference.current = callback;
-  return (...args) => {
-    return reference.current?.(...args);
-  };
-};
 
 const HourCard = ({hour_details}) => {
 
   // console.log(hour_details)
-  let {temp,humidity,hour,speed,imgsrc} =hour_details
+  let {temp,hour,imgsrc} =hour_details
 
   let fetcher
   let init_hour
@@ -41,7 +34,7 @@ const HourCard = ({hour_details}) => {
           <div className='hour-card-day'>
             {hour}
           </div>
-          <div className='hour-card-img'><img src={imgsrc} /></div>
+          <div className='hour-card-img'><img src={imgsrc} alt='weather' /></div>
           <div className='hour-card-temp'>{temp}{'\u00b0'}</div>
       </div>
 

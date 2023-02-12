@@ -14,7 +14,7 @@ const Next7DayCard = () => {
 
 
   const weatherSelect = useSelector((state) => state.weatherDetails)
-  const { loading, weatherInfo } = weatherSelect
+  const {  weatherInfo } = weatherSelect
     
   var tempInfo =[
     {"temp":24.58,"feels_like":24.03,"temp_min":23.75,"temp_max":24.58,"humidity":36,"dt":1676073600,"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"speed":3.33},
