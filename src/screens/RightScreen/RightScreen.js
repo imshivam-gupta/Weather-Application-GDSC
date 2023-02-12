@@ -92,7 +92,7 @@ const RightScreen = () => {
   return (
     
 
-    <div className={isdarkMode?'right-secn':'right-secn light-right-secn'}>
+    <div className={!isdarkMode?'right-secn':'right-secn light-right-secn'}>
 
     <div className='other-city-secn'>
 
