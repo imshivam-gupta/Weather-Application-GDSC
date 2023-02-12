@@ -40,8 +40,12 @@ const TommorowCard = () => {
 
   let imgsrc= weatherInfo && weatherInfo[day] && weatherInfo[day].weather[day] ? returnImagesSource(weatherInfo[day].weather[day].description) : returnImagesSource(tempInfo[day].weather[0].description)
  
+  const mode = useSelector((state) => state.darkMode);
+  const { isdarkMode } = mode;
+
+
   return (
-    <div className='tomorrow-card'>
+    <div className={!isdarkMode ? 'tomorrow-card' :'tomorrow-card light-tomorrow-card'}>
 
     <div className='left-section-tomorrow'>
         <div className='weather-condition-displayer'>

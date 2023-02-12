@@ -26,6 +26,22 @@
     color: var(--blue)!important;  
 }
 
+.light-mini-nav-view a{
+    color: #e78f50;
+}
+
+.light-mini-nav-view .active{
+    color: #F97F29!important;
+    font-weight: 700;
+}
+
+.light-mini-nav-view .tab:hover,.tab:active {
+    color: #F97F29!important;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+
 
 @media screen and (max-width:900px){
     .mini-nav-view{

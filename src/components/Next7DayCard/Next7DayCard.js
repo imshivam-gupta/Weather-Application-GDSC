@@ -36,8 +36,12 @@ const Next7DayCard = () => {
     slicedArray[i]["imgsrc"]=returnImagesSource(slicedArray[i].weather[0].description)     
   }
 
+  const mode = useSelector((state) => state.darkMode);
+  const { isdarkMode } = mode;
+
+
   return (
-    <div className='weather-item-cards'>
+    <div className={!isdarkMode?'weather-item-cards':'weather-item-cards active-weather-item-cards'}>
       { slicedArray && slicedArray.map((day_details) => (<OneDayCard key={id++} day_details={day_details}/>))}
     </div>
   )

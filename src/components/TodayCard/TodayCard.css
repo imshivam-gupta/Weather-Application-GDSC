@@ -14,6 +14,15 @@
     flex-direction: row;
 }
 
+.light-today-card{
+    background-color: #eedfc7f1;
+}
+
+.light-today-card *{
+    color: black;
+    font-weight: 600;
+}
+
 .today-card .left-section-today {
     display: flex;
     flex-direction: row;

@@ -3,6 +3,14 @@
     flex-direction: row;
     justify-content: space-between;
     height: 5.1vh;
+    padding: 0.7rem 0.8rem 0.8rem 0.8rem;
+}
+
+.light-nav{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    padding: 0.9rem 0.8rem 0.9rem 0.8rem;
 }
 
 
@@ -25,6 +33,13 @@
     width: 40px;
     height: 40px;
     margin-right: 10px;
+}
+
+.light-nav .nav-left-sec .light-icons{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid gray;
 }
 
 
@@ -59,6 +74,10 @@
     border-radius: 30px;
 }
 
+.light-nav .light-nav-mid-sec{
+    background-color: #F6F6F6;
+}
+
 .nav-bar .nav-mid-sec .search-bar{
     width: 75%;
     background: transparent;
@@ -68,6 +87,11 @@
     color:white;
     font-size: 1.1rem;
 }
+
+.light-nav .light-nav-mid-sec .light-search-bar{
+    color:black;
+}
+
 
 /* Right Section of Navbar */
 
@@ -93,12 +117,23 @@
     padding: 10px 14px;
 }
 
-.nav-bar .mode-toggler .active{
+.nav-bar .mode-toggler .dark-active{
     background-color: var(--blue);
     color: black;
     border-radius: 50%;
 }
 
+.light-nav .mode-toggler .light-active{
+    color:rgb(60, 58, 58);
+    background-color: rgb(60, 58, 58);
+    border-radius: 50%;
+}
+
+.light-nav .mode-toggler .dark-active{
+    z-index: 1;
+    background-color: transparent;
+    color: gray;
+}
 
 
 

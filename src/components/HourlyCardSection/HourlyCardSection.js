@@ -28,7 +28,9 @@ const HourlyCardSection = () => {
     const hourlyArray = weatherInfo.length>0 ? weatherInfo.slice(0, 5) : tempInfo.slice(0,5);
     
 
-    
+    const mode = useSelector((state) => state.darkMode);
+    const { isdarkMode } = mode;
+  
     
 
     for(let i=0;i<hourlyArray.length;i++){
@@ -42,7 +44,7 @@ const HourlyCardSection = () => {
 
       
   return (
-    <div className='hour-weather-section'>
+    <div className={!isdarkMode?'hour-weather-section':'hour-weather-section light-hour-weather-section'}>
         <h1 className='heading-for-hour'>5 Hour Weather</h1>
         <div className='hourly-cards'>
             { hourlyArray && hourlyArray.map((hour_details) => ( <HourCard key={id++} hour_details={hour_details} />))}

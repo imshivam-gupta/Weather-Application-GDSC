@@ -5,6 +5,7 @@ import { returnImagesSource } from '../../services/ImageGiver';
 import './OtherCityCard.css'
 
 import { useDrag } from "react-use-gesture";
+import { useSelector } from 'react-redux';
 
 
 
@@ -37,10 +38,13 @@ const OtherCityCard = ({oth_city}) => {
     
   }, [temp])
   
+  const mode = useSelector((state) => state.darkMode);
+  const { isdarkMode } = mode;
+
 
 
   return (
-    <div className='other-city-card'
+    <div className={!isdarkMode ?'other-city-card' :'other-city-card light-other-city-card'}
     onClick={cityChangeHandler}
       // {...bindDivPos()}
       style={{

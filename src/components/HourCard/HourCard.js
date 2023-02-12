@@ -27,13 +27,16 @@ const HourCard = ({hour_details}) => {
     fetcher = ' AM'
     hour = hour +':00' + fetcher
   }
+  
+  const mode = useSelector((state) => state.darkMode);
+  const { isdarkMode } = mode;
 
 
   return (
     <>
     {
     
-      <div className={'hour-card'}>
+      <div className={!isdarkMode ? 'hour-card' :'hour-card light-hour-card'}>
 
           <div className='hour-card-day'>
             {hour}

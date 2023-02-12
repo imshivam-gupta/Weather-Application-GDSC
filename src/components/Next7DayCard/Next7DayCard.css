@@ -11,6 +11,11 @@
 
 }
 
+.active-weather-item-cards{
+    background-color: #F7F7F7;
+    margin-top: 1rem;
+}
+
 .weather-item-cards::-webkit-scrollbar{
     display: none;
 }

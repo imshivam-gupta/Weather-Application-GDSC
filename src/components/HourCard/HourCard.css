@@ -34,3 +34,13 @@
     font-family: 'Quantico', sans-serif;
 }
 
+
+.light-hour-card{
+    background-color: rgb(250, 250, 250);
+    border: 1px solid orange;
+}
+
+.light-hour-card .hour-card-day{
+    border-bottom: 1px solid orange;
+    font-weight: 700;
+}

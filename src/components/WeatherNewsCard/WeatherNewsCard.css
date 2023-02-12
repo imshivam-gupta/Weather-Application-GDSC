@@ -14,6 +14,11 @@
     border-bottom: 0px solid gray;
 }
 
+.light-weather-news-card{
+    background-color: #F7F7F7;
+    color: black;
+    font-weight: 500;
+}
 
 @media screen and (orientation : portrait){
     .weather-news-card{

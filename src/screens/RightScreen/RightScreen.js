@@ -85,12 +85,14 @@ const RightScreen = () => {
     setListWeather(items);
   }
 
+  const mode = useSelector((state) => state.darkMode);
+  const { isdarkMode } = mode;
 
 
   return (
     
 
-    <div className='right-secn'>
+    <div className={isdarkMode?'right-secn':'right-secn light-right-secn'}>
 
     <div className='other-city-secn'>
 

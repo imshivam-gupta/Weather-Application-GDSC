@@ -1,12 +1,13 @@
 import React, {  useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { AddOtherCity, getWeatherAction } from '../../redux/actions'
+import { AddOtherCity, getWeatherAction, handledarkMode } from '../../redux/actions'
 import './Header.css'
 
 const Header = () => {
 
     const dispatch = useDispatch()
     const [citySearch,setCitySearch] = useState('')
+
     
     const submitHandler= (e) =>{
         e.preventDefault()
@@ -18,6 +19,14 @@ const Header = () => {
     const weatherDetails = useSelector((state) => state.weatherDetails)
     let { loading, weatherInfo } = weatherDetails
 
+    const mode = useSelector((state) => state.darkMode);
+    const { isdarkMode } = mode;
+
+    const switchDarkMode = () => {
+        isdarkMode
+          ? dispatch(handledarkMode(false))
+          : dispatch(handledarkMode(true));
+    };
 
     const AddHandler = () => {
         let city = prompt("Enter city name to append in List", "None");
@@ -36,15 +45,15 @@ const Header = () => {
     {
         loading ? <h1>Loading...</h1> :
     
-        <header className='nav-bar'>
+        <header className={!isdarkMode?'nav-bar':'nav-bar light-nav'}>
 
-                <div className='nav-left-sec' style={{cursor:'pointer'}}>
+                <div className='nav-left-sec'>
 
-                    <div className='nav-icons' onClick={AddHandler}>
+                    <div className='nav-icons light-icons' onClick={AddHandler} style={{cursor:'pointer'}}>
                         <i className="fa-solid fa-plus" />
                     </div>
 
-                    <div className='nav-icons'>
+                    <div className='nav-icons light-icons' style={{cursor:'pointer'}}>
                         <i className="fa-sharp fa-solid fa-bell" />
                     </div>
 
@@ -55,12 +64,12 @@ const Header = () => {
 
                 </div>
 
-                <div className='nav-mid-sec' >
+                <div className='nav-mid-sec light-nav-mid-sec' >
                     <i className="fa-solid fa-magnifying-glass" onClick={submitHandler}/>
 
                     <input 
                         type='text' 
-                        className='search-bar' 
+                        className='search-bar light-search-bar' 
                         placeholder='Search City...'
                         onChange={(e)=>setCitySearch(e.target.value)}
                         onKeyDown={_handleKeyDown}
@@ -69,10 +78,10 @@ const Header = () => {
                 </div>
 
                 <div className='nav-right-sec'>
-                    {/* <div className='mode-toggler' style={{'cursor':'pointer'}}>
-                        <i className="fa-solid fa-moon active" />
-                        <i className="fa-solid fa-sun"></i>
-                    </div> */}
+                    <div className='mode-toggler' style={{'cursor':'pointer'}} onClick={switchDarkMode}>
+                        <i className="fa-solid fa-moon dark-active" />
+                        <i className="fa-solid fa-sun light-active"></i>
+                    </div>
                     <img src="images/user-img.png" className='user-img'></img>
                 </div>
 

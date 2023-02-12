@@ -3,7 +3,7 @@ import getFormattedWeatherData from "../services/WeatherService";
 
 import { 
     ADD_TO_WEATHER_LIST, REMOVE_FROM_WEATHER_LIST,
-    GET_WEATHER_FAIL, GET_WEATHER_REQUEST, GET_WEATHER_SUCCESS
+    GET_WEATHER_FAIL, GET_WEATHER_REQUEST, GET_WEATHER_SUCCESS, DARK_MODE
 } from "./constants"
 
 
@@ -73,3 +73,12 @@ export const removeOtherCity = (del_name) => (dispatch,getState) => {
 }
 
 
+export const handledarkMode = (e) => async (dispatch) => {
+
+    localStorage.setItem("darkMode", e);
+  
+    dispatch({
+      type: DARK_MODE,
+      payload: e,
+    });
+  };

@@ -14,6 +14,15 @@
     flex-direction: row;
 }
 
+.light-tomorrow-card{
+    background-color: #eedfc7f1;
+}
+
+.light-tomorrow-card *{
+    color: black;
+    font-weight: 600;
+}
+
 .tomorrow-card .left-section-tomorrow {
     display: flex;
     flex-direction: row;

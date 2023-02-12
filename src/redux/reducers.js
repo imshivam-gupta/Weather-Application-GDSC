@@ -1,6 +1,6 @@
 import { 
     ADD_TO_WEATHER_LIST, REMOVE_FROM_WEATHER_LIST,
-    GET_WEATHER_FAIL, GET_WEATHER_REQUEST, GET_WEATHER_SUCCESS, THEME_CHANGER
+    GET_WEATHER_FAIL, GET_WEATHER_REQUEST, GET_WEATHER_SUCCESS, THEME_CHANGER, DARK_MODE
 } from "./constants"
 
 
@@ -31,9 +31,14 @@ export const otherCityWeatherReducers = (state={otherWeathersList:[]},action) =>
 }
 
 
-export const themeChangeReducer = (state={},action) => {
-    switch (action.type){
-        case THEME_CHANGER: return{}
-        default           : return state
+export const darkModeReducer = (state = {}, action) => {
+    switch (action.type) {
+      case DARK_MODE:
+        return {
+          ...state,
+          isdarkMode: action.payload,
+        };
+      default:
+        return state;
     }
-}
+  };

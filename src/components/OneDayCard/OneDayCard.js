@@ -27,6 +27,9 @@ const OneDayCard = ({day_details}) => {
     return () => clearInterval(handle);
   }, []);
 
+  const mode = useSelector((state) => state.darkMode);
+  const { isdarkMode } = mode;
+
 
   return (
     <>
@@ -34,7 +37,7 @@ const OneDayCard = ({day_details}) => {
     
     !isToday?
 
-      <div className={'weather-card'}>
+      <div className={!isdarkMode?'weather-card':'weather-card light-weather-card'}>
 
           <div className='weather-card-day'>
             {day.substring(0,3)} 
@@ -43,7 +46,7 @@ const OneDayCard = ({day_details}) => {
           <div className='weather-card-temp'>{temp}{'\u00b0'}</div>
       </div>:
 
-      <div className={'weather-card active-weather-card'}>
+      <div className={!isdarkMode?'weather-card active-weather-card':'weather-card active-weather-card light-active-weather-card'}>
 
         <div className='active-card-day'>
           {day} <span className='time-india'>{time}</span>

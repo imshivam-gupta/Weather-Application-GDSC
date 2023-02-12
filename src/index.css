@@ -17,7 +17,7 @@ code {
 /* FIXING FEW COLORS TO BE USED FREQUENTLY */
 :root {
   --blue: rgb(213,231,245);
-  --orange: #ffc477;
+  --orange: #F97F29;
   --black:rgb(16,16,20);
   --gray:  rgb(27,26,29);;
 }
@@ -41,10 +41,16 @@ header{
   margin-bottom: 1rem;
 }
 
-body{
+.react-app{
   background-color: var(--black);
+  /* background-color: rgb(255, 255, 255); */
   color: white;
-  padding: 1rem 0rem 0rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.light-react-app{
+  /* background-color: var(--black); */
+  background-color: rgb(255, 255, 255);
 }
 
 a{
@@ -59,7 +65,7 @@ a{
     flex-direction: column;
   }
 
-  body{
+  .react-app{
     padding: 0rem 0rem;
   }
 

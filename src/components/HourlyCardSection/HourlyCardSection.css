@@ -8,6 +8,10 @@
     /* padding-left: 4rem; */
 }
 
+.light-hour-weather-section{
+    color: black;
+}
+
 .hourly-cards::-webkit-scrollbar{
     display: none;
 }
@@ -20,6 +24,9 @@
     letter-spacing: 1.1px;
 } 
 
+.light-hour-weather-section{
+    color: black;
+}
 
 @media screen and (orientation : portrait){
     .hourly-cards{
