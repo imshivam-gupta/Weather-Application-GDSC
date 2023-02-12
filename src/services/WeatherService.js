@@ -39,7 +39,7 @@ function rotate(animals,num){
 const format7dayWeather = (data) => {
 
     let updated= []
-    for(let i =0;i<20;i++) if(i%3==0) updated.push(data.list[i])
+    for(let i =0;i<20;i++) if(i%3===0) updated.push(data.list[i])
 
     let day_7_weather=[];
 

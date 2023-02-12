@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './RightScreen.css'
 import OtherCityCard from '../../components/OtherCityCard/OtherCityCard'
@@ -39,7 +39,7 @@ const RightScreen = () => {
   const [listWeather,setListWeather] = useState(otherWeathersList)
   
   const weatherDetails = useSelector((state) => state.weatherDetails)
-  const { loading, weatherInfo } = weatherDetails
+  const {  weatherInfo } = weatherDetails
 
   if(listWeather) {
     for(let i=0;i<listWeather.length;i++) {listWeather[i].isDragging=false; listWeather[i]._id=i.toString()}
@@ -50,26 +50,18 @@ const RightScreen = () => {
 
   const addcityHandler = () =>{
     let city = prompt("Enter city name to append in List", "None");
-    if(city!="None" && city!="") dispatch(AddOtherCity(city))
+    if(city!=="None" && city!=="") dispatch(AddOtherCity(city))
     setListWeather(otherWeathersList)
   }
 
-  let id = 0
 
   useEffect(()=>{
       setListWeather(otherWeathersList)
       // console.log(listWeather)
-  },[listWeather,addcityHandler])
+  },[otherWeathersList,listWeather,addcityHandler])
   
   
   
-  function handleOnDragEnd(result) {
-    if(!result.destination) return;
-    const items = Array.from(listWeather);
-    const [reorderedItem] = items.splice(result.source.index, 1);
-    items.splice(result.destination.index, 0, reorderedItem);
-    setListWeather(items);
-  }
 
   const mode = useSelector((state) => state.darkMode);
   const { isdarkMode } = mode;
