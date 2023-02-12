@@ -3,9 +3,6 @@
     width: 100%;
     /* min-height: 60p/x; */
     background-color: #1B1A1D;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
     padding: 1rem 0.8rem;
     border-bottom: 0.4px solid gray;
 }
