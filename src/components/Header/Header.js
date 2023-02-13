@@ -84,6 +84,11 @@ const Header = () => {
                     </div>
                 </div>
 
+                <div className='mode-toggle-phone' style={{'display':'none'}} onClick={switchDarkMode}>
+                        <i className="fa-solid fa-moon dark-active" />
+                        <i className="fa-solid fa-sun light-active"></i>
+                </div>
+
 
 
         </header>

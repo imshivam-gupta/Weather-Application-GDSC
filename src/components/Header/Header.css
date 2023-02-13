@@ -161,6 +161,29 @@
     .nav-bar .nav-left-sec{display: none;}
     .nav-bar .nav-mid-sec{width: 70%;}
     .nav-bar .nav-right-sec .mode-toggler{display: none;}
+    .nav-bar .mode-toggle-phone{
+        display: block!important;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 30px;
+        width: fit-content;
+    }
+    .nav-bar .mode-toggle-phone .dark-active{
+        display: none;
+    }
+    .nav-bar .mode-toggle-phone .light-active{
+        color: orange;
+        font-size: 1.5rem;
+    }
+    .light-nav .mode-toggle-phone .light-active{
+        display: none;
+    }
+    .light-nav .mode-toggle-phone .dark-active{
+        color: rgb(55, 54, 54);
+        font-size: 1.5rem;
+        display: block;
+    }
+
 }
 
 /* @media screen and  (max-width: 900px){
