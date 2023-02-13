@@ -4,6 +4,8 @@
     justify-content: space-between;
     height: 5.1vh;
     padding: 0.7rem 0.8rem 0.8rem 0.8rem;
+    background-color: rgb(40,40,40);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .light-nav{
@@ -71,7 +73,7 @@
     align-items: center;
     background-color: rgb(30,30,30);
     justify-content: center;
-    border-radius: 30px;
+    border-radius: 10px;
 }
 
 .light-nav .light-nav-mid-sec{
@@ -83,7 +85,7 @@
     background: transparent;
     outline: none;
     border: none;
-    padding-left: 5%;
+    padding-left: 8%;
     color:white;
     font-size: 1.1rem;
 }
@@ -107,9 +109,9 @@
     height: 100%;
     align-items: center;
     background-color: rgb(30,30,30);
-    width: 95px;
+    width: 80px;
     border-radius: 30px;
-    font-size: 1.4rem;
+    font-size: 1rem;
     justify-content: space-between;
 }
 
@@ -117,30 +119,41 @@
     padding: 10px 14px;
 }
 
-.nav-bar .mode-toggler .dark-active{
-    background-color: var(--blue);
-    color: black;
-    border-radius: 50%;
-}
 
-.light-nav .mode-toggler .light-active{
-    color:rgb(60, 58, 58);
+
+.nav-bar .mode-toggler .dark-active{
+    color: white!important;;
     background-color: rgb(60, 58, 58);
     border-radius: 50%;
 }
 
+
+.nav-bar .mode-toggler .light-active{
+    color: orange;
+}
+
+
+.nav-bar .mode-toggler .dark-active{
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+}
+
+
+
+.light-nav .mode-toggler .light-active{
+    color:rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+
 .light-nav .mode-toggler .dark-active{
     z-index: 1;
     background-color: transparent;
-    color: gray;
+    color: rgb(255,255,255);
 }
 
-
-
-.nav-bar .nav-right-sec .user-img{
-    height: 100%;
-    border-radius: 50%;
-}
 
 
 @media screen and (orientation : portrait){

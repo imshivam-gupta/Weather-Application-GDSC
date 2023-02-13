@@ -18,8 +18,8 @@ code {
 :root {
   --blue: rgb(213,231,245);
   --orange: #F97F29;
-  --black:rgb(16,16,20);
-  --gray:  rgb(27,26,29);;
+  --black:#1A1A1A;
+  --gray:  #282828;
 }
 
 

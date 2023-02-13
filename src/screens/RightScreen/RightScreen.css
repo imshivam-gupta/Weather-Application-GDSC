@@ -47,7 +47,7 @@
     justify-content: space-between;
     margin-bottom: 15px;
     height: 2rem;
-    background-color: rgb(29, 28, 28);
+    background-color: var(--gray);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding: 9px 30px;
@@ -141,7 +141,7 @@
     text-align: center;
     margin-bottom: 15px;
     height: 2rem;
-    background-color: rgb(29, 28, 28);
+    background-color: var(--gray);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding: 9px 0px;
@@ -162,6 +162,7 @@
     overflow-y: auto;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius:20px ;
+    border-bottom: 1px solid var(--gray);
 }
 
 .right-secn .latest-news-list::-webkit-scrollbar{

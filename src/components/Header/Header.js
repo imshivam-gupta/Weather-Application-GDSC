@@ -53,9 +53,9 @@ const Header = () => {
                         <i className="fa-solid fa-plus" />
                     </div>
 
-                    <div className='nav-icons light-icons' style={{cursor:'pointer'}}>
+                    {/* <div className='nav-icons light-icons' style={{cursor:'pointer'}}>
                         <i className="fa-sharp fa-solid fa-bell" />
-                    </div>
+                    </div> */}
 
                     <div className='curr-loc-name'>
                         <i className='fa-solid fa-location-dot loc-pin' /> 
