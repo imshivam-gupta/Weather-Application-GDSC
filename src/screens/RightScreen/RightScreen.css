@@ -26,6 +26,22 @@
     margin-bottom: 5px;
 } */
 
+
+.right-secn .empty-city-box{
+    width: 98.5%;
+    height: 94%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:3px solid gray;
+    z-index: 2;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
 .heading-other-city{
     display: flex;
     justify-content: space-between;

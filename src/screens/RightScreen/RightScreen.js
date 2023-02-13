@@ -86,7 +86,7 @@ const RightScreen = () => {
 
               <div className='other-city-list'>
                     {
-                      listWeather && listWeather.map( (oth_city,index) =>  {
+                      listWeather && listWeather.length>0 ? listWeather.map( (oth_city,index) =>  {
                            return (
                               <div
                               >
@@ -96,7 +96,7 @@ const RightScreen = () => {
                                 /> 
                               </div>
                               )}
-                          )}
+                          ) : <div className='empty-city-box' onClick={addcityHandler}> Add City to Watchlist </div>}
                 </div>
 
       
