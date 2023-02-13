@@ -30,10 +30,7 @@ export const getWeatherAction = (city) => async(dispatch,getState) => {
         
         dispatch({
             type: GET_WEATHER_FAIL,
-                payload: 
-                error.response && error.response.data.message     
-                ? error.response.data.message
-                : error.message
+            payload: error
         })
     }
 }

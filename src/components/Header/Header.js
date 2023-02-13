@@ -43,9 +43,9 @@ const Header = () => {
   return <>
   
     {
-        loading ? <h1>Loading...</h1> :
+        loading && <h1>Loading...</h1>}
     
-        <header className={!isdarkMode?'nav-bar':'nav-bar light-nav'}>
+        {<header className={!isdarkMode?'nav-bar':'nav-bar light-nav'}>
 
                 <div className='nav-left-sec'>
 
@@ -82,7 +82,6 @@ const Header = () => {
                         <i className="fa-solid fa-moon dark-active" />
                         <i className="fa-solid fa-sun light-active"></i>
                     </div>
-                    <img src="images/user-img.png" alt='user-img' className='user-img'></img>
                 </div>
 
 

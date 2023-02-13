@@ -10,15 +10,22 @@ const App = () => {
   const mode = useSelector((state) => state.darkMode);
   const { isdarkMode } = mode;
 
+  const weatherDetails = useSelector((state) => state.weatherDetails)
+  let { error } = weatherDetails
+  
 
   return (
     <div className={!isdarkMode?'react-app':'light-react-app'}>
       <Header />
 
-      <main>
-        <LeftScreen />
-        <RightScreen />
-      </main>
+      {error && 
+          <div class="alert-box failure">Searched city does not exist</div>
+      }
+      
+        <main>
+          <LeftScreen />
+          <RightScreen />
+        </main>
 
       <Footer />
     </div>

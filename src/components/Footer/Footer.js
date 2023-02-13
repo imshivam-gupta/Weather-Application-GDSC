@@ -12,9 +12,9 @@ const Footer = () => {
   return (
     <footer className={!isdarkMode?'':'light-footer'}>
         <div className='social-links'>
-            <Link to='https://github.com/imshivam-gupta'><i class="fa-brands fa-github"></i></Link>
-            <Link to='https://www.linkedin.com/in/shivam-gupta-bbb669226/'><i class="fa-brands fa-instagram"></i></Link>
-            <Link to='https://www.linkedin.com/in/shivam-gupta-bbb669226/'><i class="fa-brands fa-linkedin-in"></i></Link>
+            <Link to='https://github.com/imshivam-gupta'><i className="fa-brands fa-github"></i></Link>
+            <Link to='https://www.linkedin.com/in/shivam-gupta-bbb669226/'><i className="fa-brands fa-instagram"></i></Link>
+            <Link to='https://www.linkedin.com/in/shivam-gupta-bbb669226/'><i className="fa-brands fa-linkedin-in"></i></Link>
         </div>
 
         <div className='credit-displayer'>

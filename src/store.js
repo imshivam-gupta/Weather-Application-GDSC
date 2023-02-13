@@ -19,7 +19,7 @@ const darkModeFromStorage = localStorage.getItem('darkMode')?JSON.parse(localSto
 const initialState = {
     weatherDetails: { weatherInfo: weatherInfoFromStorage },
     otherWeathers : { otherWeathersList: otherWeathersListFromStorage},
-    isdarkMode : darkModeFromStorage,
+    darkMode : {isdarkMode:darkModeFromStorage},
 } // Keeping inital state saved from local storage
 
 const middleware = [thunk]

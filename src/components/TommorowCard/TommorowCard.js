@@ -34,11 +34,11 @@ const TommorowCard = () => {
         <div className='weather-condition-displayer'>
           <span>Current Weather</span>
           <img src={imgsrc} style={{'width':'80px'}} alt='weather' />
-          <span className='weather-tomorrow'>  {weatherInfo[day] && weatherInfo[day].weather[day] ? (weatherInfo[day].weather[day].description.charAt(0).toUpperCase()+weatherInfo[day].weather[day].description.substring(1)): (tempInfo[day].weather[0].description.charAt(0).toUpperCase()+tempInfo[day].weather[0].description.substring(1))}</span>
+          <span className='weather-tomorrow'>  { weatherInfo && weatherInfo[day] && weatherInfo[day].weather[day] ? (weatherInfo[day].weather[day].description.charAt(0).toUpperCase()+weatherInfo[day].weather[day].description.substring(1)): (tempInfo[day].weather[0].description.charAt(0).toUpperCase()+tempInfo[day].weather[0].description.substring(1))}</span>
         </div>
     
         <div className='temp-displayer'>
-          <span className='temp-tomorrow'>{weatherInfo[day] ? weatherInfo[day].temp : '16'}{'\u00b0'}</span>
+          <span className='temp-tomorrow'>{ weatherInfo && weatherInfo[day] ? weatherInfo[day].temp : '16'}{'\u00b0'}</span>
           <span className='real-feel'>RealFeel &reg; {currWeather.feels_like}</span>
         </div>
     </div>

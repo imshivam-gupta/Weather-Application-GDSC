@@ -25,7 +25,7 @@ const HourlyCardSection = () => {
 
     const weatherSelect = useSelector((state) => state.weatherDetails)
     const { weatherInfo } = weatherSelect
-    const hourlyArray = weatherInfo.length>0 ? weatherInfo.slice(0, 5) : tempInfo.slice(0,5);
+    const hourlyArray = weatherInfo && weatherInfo.length>0 ? weatherInfo.slice(0, 5) : tempInfo.slice(0,5);
     
 
     const mode = useSelector((state) => state.darkMode);

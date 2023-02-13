@@ -49,18 +49,18 @@ const TodayCard = () => {
             <span>Current Weather</span>
             <span>{time}</span>
             <img src={imgsrc} style={{'width':'80px'}} alt='weather' />
-            <span className='weather-today'>  {weatherInfo[day] && weatherInfo[day].weather[0] ? (weatherInfo[day].weather[0].description.charAt(0).toUpperCase()+weatherInfo[day].weather[0].description.substring(1)): (tempInfo[day].weather[0].description.charAt(0).toUpperCase()+tempInfo[day].weather[0].description.substring(1))}</span>
+            <span className='weather-today'>  {weatherInfo && weatherInfo[day] && weatherInfo[day].weather[0] ? (weatherInfo[day].weather[0].description.charAt(0).toUpperCase()+weatherInfo[day].weather[0].description.substring(1)): (tempInfo[day].weather[0].description.charAt(0).toUpperCase()+tempInfo[day].weather[0].description.substring(1))}</span>
           </div>
       
           <div className='temp-displayer'>
-            <span className='temp-today'>{weatherInfo[day] ? weatherInfo[day].temp : tempInfo[day].temp}{'\u00b0'}</span>
+            <span className='temp-today'>{ weatherInfo && weatherInfo[day] ? weatherInfo[day].temp : tempInfo[day].temp}{'\u00b0'}</span>
             <span className='real-feel'>RealFeel &reg; {currWeather.feels_like}</span>
           </div>
       </div>
 
 
       <div className='right-section-today'>
-        <span className='city-name-today'>{weatherInfo && weatherInfo[7] ? weatherInfo[7].q : tempInfo[7].q}</span>
+        <span className='city-name-today'>{ weatherInfo && weatherInfo[7] ? weatherInfo[7].q : tempInfo[7].q}</span>
         <div className='today-other-condn'>
           <div className='property'>
             <span>Real Feel</span>

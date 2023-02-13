@@ -28,7 +28,7 @@ const Next7DayCard = () => {
   ]
 
   
-  const slicedArray = weatherInfo.length>0 ? weatherInfo.slice(0, 7):tempInfo.slice(0,7)
+  const slicedArray = weatherInfo && weatherInfo.length>0 ? weatherInfo.slice(0, 7):tempInfo.slice(0,7)
 
   for(let i=0;i<slicedArray.length;i++){
     slicedArray[i]["day"]=weekday[i];
